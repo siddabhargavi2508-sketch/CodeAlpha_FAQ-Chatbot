@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBot - Technology FAQ Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="brand-icon">T</div>
+            <div>
+                <h2>TechBot</h2>
+                <p>TECH FAQ ASSISTANT</p>
+            </div>
+        </div>
+
+        <button class="new-chat" id="newChat">
+            <span>＋</span> New Chat
+        </button>
+
+        <div class="history-heading">
+            <span>Your conversations</span>
+            <button id="clearAllChats" title="Delete all chats">⋯</button>
+        </div>
+
+        <div class="chat-history" id="chatHistory"></div>
+
+        <div class="sidebar-footer">
+            <div class="footer-logo">✦</div>
+            <div>
+                <strong>Technology Assistant</strong>
+                <p>Your personal FAQ knowledge base</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <button class="menu-button" id="menuButton" aria-label="Toggle sidebar">☰</button>
+
+            <div class="topbar-title">
+                <h3>Technology FAQ Chatbot</h3>
+                <span><i class="status-dot"></i> Ready to help</span>
+            </div>
+
+            <button class="clear-button" id="clearChat">Clear chat</button>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-icon">✦</div>
+                <p class="eyebrow">YOUR TECH KNOWLEDGE PARTNER</p>
+                <h1>What would you like to<br>learn about technology?</h1>
+                <p class="welcome-description">
+                    Ask anything about programming languages, web development,
+                    and computer technology.
+                </p>
+
+                <div class="suggestion-grid">
+                    <button class="suggestion-card" data-question="Who developed Python?">
+                        <span class="card-icon purple">Py</span>
+                        <span><strong>Python</strong><small>Who developed Python?</small></span>
+                        <span class="arrow">↗</span>
+                    </button>
+
+                    <button class="suggestion-card" data-question="What is artificial intelligence?">
+                        <span class="card-icon pink">AI</span>
+                        <span><strong>Artificial Intelligence</strong><small>What is AI?</small></span>
+                        <span class="arrow">↗</span>
+                    </button>
+
+                    <button class="suggestion-card" data-question="What does HTML stand for?">
+                        <span class="card-icon orange">H</span>
+                        <span><strong>HTML</strong><small>What does HTML stand for?</small></span>
+                        <span class="arrow">↗</span>
+                    </button>
+
+                    <button class="suggestion-card" data-question="What is cybersecurity?">
+                        <span class="card-icon blue">CS</span>
+                        <span><strong>Cybersecurity</strong><small>What is cybersecurity?</small></span>
+                        <span class="arrow">↗</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages" id="chatMessages"></div>
+
+        </section>
+
+        <footer class="composer-area">
+            <form class="chat-form" id="chatForm">
+                <textarea
+                    id="userInput"
+                    rows="1"
+                    placeholder="Ask a technology question..."
+                    aria-label="Ask a technology question"
+                    required
+                ></textarea>
+
+                <button type="submit" id="sendButton" aria-label="Send message">➤</button>
+            </form>
+
+            <p class="composer-note">
+                TechBot answers from its built-in FAQ knowledge base.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
